@@ -1,4 +1,7 @@
 ## Project of Week 5 of Developing Data Products
 
-This project contains an shiny app (ui.R and server.R archives) and an reproducible pitch presentation (https://rpubs.com/dariogodoy/Project_Week5).
+This project contains 
+- GitHub repository: https://github.com/dariogodoy2003/Project_Module_5/
+- Shiny app (ui.R and server.R archives)
+- Reproducible pitch presentation (https://rpubs.com/dariogodoy/Project_Week5).
 
