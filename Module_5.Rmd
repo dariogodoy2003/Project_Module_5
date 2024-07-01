@@ -1,0 +1,57 @@
+---
+title: "Project of Module 5"
+author: "Dario Godoy"
+date: "2024-07-01"
+output: slidy_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## In this project
+
+This project corresponds to Module 5 of Developing Data Products Course. This assignment has two parts:
+   
+1. Create a Shiny app and deploy it. 
+2. Prepare a reproducible pitch presentation about the app.
+
+The app include:
+   
+1. Two numeric input boxes
+2. A prediction model on dataset
+3. An output of concentration predicted on inputs with the calculated model
+
+## Use of app
+
+The origin of data is "Pharmacokinetics of Theophylline dataset" ("Theoph"). The Theoph data frame has 132 rows and 5 columns of data from an experiment on the pharmacokinetics of theophylline. The variables are:   
+
+* **Subject**: an ordered factor with levels 1, ..., 12 identifying the subject on whom the observation was made. The ordering is by increasing maximum concentration of theophylline observed.   
+
+* **Wt**: weight of the subject (kg).   
+
+* **Dose**: dose of theophylline administered orally to the subject (mg/kg).  
+
+* **Time**: time since drug administration when the sample was drawn (hr).   
+
+* **conc**: theophylline concentration in the sample (mg/L).   
+
+
+Additional data are in my GitHub Repository.
+
+## Theof dataset
+
+Boeckmann, Sheiner and Beal (1994) report data from a study by Dr. Robert Upton of the kinetics of the anti-asthmatic drug theophylline. Twelve subjects were given oral doses of theophylline then serum concentrations were measured at 11 time points over the next 25 hours.
+
+```{r}
+str(Theoph)
+
+```
+
+## Plot Theoph dataset
+
+```{r, echo=FALSE,fig.align='center'}
+plot(conc~Time, data = Theoph, col = Subject,
+     main = "Theophylline concentration vs. Time", 
+     xlab = "Time(h)", ylab = "conc(mg/L)", pch = 16)
+```
